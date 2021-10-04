@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+
+.header {
+  background-color: #7fd0ff45 !important;
+
+  .navbar {
+    justify-content: space-around;
+  }
+
+  .myShow {
+    display: block !important;
+    width: 100% !important;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li{
+          width: 50% !important;
+      }
+    }
+  }
+
+  img {
+    // width: 89px;
+    margin: 0;
+    height: 10vh;
+    transition: 1s;
+  }
+
+  .mySpan {
+    font-weight: bold;
+    color: blue;
+    font-size: 27px;
+    font-family: "Ephesis", cursive;
+    margin-right: 6px;
+  }
+
+  .myLogo-home {
+    cursor: pointer;
+  }
+
+  .navbarToggler {
+    display: none;
+    font-weight: bolder;
+    font-size: 33px;
+    background-color: transparent;
+    border: none;
+    color: blue !important;
+    transition: 1s;
+  }
+
+  .navbarNav {
+    ul {
+      list-style-type: none !important;
+
+      li {
+        color: black;
+        margin-right: 40px;
+        cursor: pointer;
+        transition: 1s;
+        padding: 10px;
+      }
+      li.active::after {
+        content: "";
+        height: 3px;
+        width: 134%;
+        display: block;
+        background-color: blue;
+      }
+      li.active {
+        font-weight: bold;
+        background-color: white;
+        border-radius: 5px;
+        // font-size: 17px;
+      }
+      li:hover {
+        font-weight: bold;
+        background-color: white;
+        border-radius: 5px;
+        // font-size: 17px;
+
+        &::after {
+          content: "";
+          height: 3px;
+          width: 134%;
+          display: block;
+          background-color: blue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    img {
+      height: 8vh;
+    }
+    .navbarToggler {
+      display: block;
+    }
+    .navbarNav {
+      display: none;
+    }
+  }
+}
