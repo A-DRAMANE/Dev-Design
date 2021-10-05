@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useRef } from 'react';
 import { BsBarChartSteps } from "react-icons/bs";
 
 function Header() {
 
   const collaps = useRef(null)
+  const nav = useRef(null)
 
   const handleCollaps = (e) => {
     console.log(collaps.current);
     collaps.current.classList.toggle('myShow')
   }
+  
+  // useEffect(() => {
+  //   window.addEventListener('scroll', e =>{
+  //     console.log('salut');
+  //     if (scrollY > 100) {
+  //       console.log(1);
+  //     } else {
+  //       console.log(2);
+  //     }
+  //   })
+  // }, )
 
+  
     return (
-      <header className='header'>
+      <header ref={nav} className='header'>
         <div className="container">
           <nav className="navbar">
               <div className='myLogo-home'>
@@ -27,7 +40,8 @@ function Header() {
                   <li className="active">Acceuil</li>
                   <li className="">Aprops</li>
                   <li className="">Nos produit</li>
-                  <li className=" ms-0">Contact</li>
+                  <li className="">Inspirations</li>
+                  <li className="">Contact</li>
                 </ul>
               </div>
           </nav>
